@@ -1,7 +1,14 @@
 <app-header/>
 <main>
 <ul id="users">
-    <li><app-user/></li>
+    <li >
+        <app-user 
+        [id]="users[0].id" 
+        [name]="users[0].name" 
+        [avatar]="users[0].avatar" 
+        (selectUser)="handleSelect($event)"
+        />
+    </li>
 </ul>
 </main>
 <router-outlet />

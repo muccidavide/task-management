@@ -1,10 +1,11 @@
 // CORE
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-
+import { DUMMY_USERS } from '../assets/users/dummy-users';
 // COMPONENTS
 import { HeaderComponent } from './components/header/header.component';
 import { UserComponent } from "./components/user/user.component";
+import { User } from './models/User';
 
 @Component({
     selector: 'app-root',
@@ -15,4 +16,10 @@ import { UserComponent } from "./components/user/user.component";
 })
 export class AppComponent {
   title = 'first-angular-app';
+  users: User[] = DUMMY_USERS;
+
+  handleSelect(id: string){
+    console.log(id);
+    
+  }
 }
