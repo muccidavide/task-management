@@ -9,6 +9,15 @@
         (selectUser)="handleSelect($event)"
         />
     </li>
+    <li >
+        <app-user 
+        [id]="users[1].id" 
+        [name]="users[1].name" 
+        [avatar]="users[1].avatar" 
+        (selectUser)="handleSelect($event)"
+        />
+    </li>
 </ul>
+<app-tasks [name]="userName"/>
 </main>
 <router-outlet />
