@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { DUMMY_USERS } from '../../../assets/users/dummy-users';
 import { User } from '../../models/User';
 
 @Component({
@@ -10,14 +9,12 @@ import { User } from '../../models/User';
   styleUrl: './user.component.scss'
 })
 export class UserComponent {
-  @Input({required: true}) id!: string; 
-  @Input({required: true}) name!: string; 
-  @Input({required: true}) avatar!: string; 
-
-  @Output() selectUser = new EventEmitter<string>();
+  @Input({required: true}) user!: User; 
+  @Input({required: true}) selected!: boolean;
+  @Output() selectUser = new EventEmitter<User>();
 
   handleUserClick() {
-    this.selectUser.emit(this.id);
+    this.selectUser.emit(this.user);
   }
 
 }

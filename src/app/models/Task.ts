@@ -1,0 +1,10 @@
+import { ITask } from "./interfaces/ITask";
+
+export class Task implements ITask{
+    constructor(public id: string,
+        public userId: string, 
+        public title: string,
+        public summary: string,
+        public dueDate: string
+    ){}
+}

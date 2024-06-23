@@ -19,11 +19,11 @@ import { User } from './models/User';
 export class AppComponent {
   title = 'first-angular-app';
   users: User[] = DUMMY_USERS;
-  userName: string = 'Please select a user to view his tasks';
+  selectedUser?: User;
 
-  handleSelect(id: string){
-    let name = DUMMY_USERS.find(u => u.id === id)?.name;
-    this.userName = name ?? this.userName;
+  handleSelect(user: User){
+    this.selectedUser = DUMMY_USERS.find(u => u === user);
   }
+  
 }
  
