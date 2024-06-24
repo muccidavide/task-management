@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { DatePipe } from '@angular/common';
 //Comp
 import { CardComponent } from '../../shared/card/card.component';
 //Model & Service
@@ -8,8 +7,6 @@ import { TasksService } from '../../../services/tasks.services';
 
 @Component({
   selector: 'app-task',
-  standalone: true,
-  imports: [CardComponent, DatePipe],
   templateUrl: './task.component.html',
   styleUrl: './task.component.scss'
 })

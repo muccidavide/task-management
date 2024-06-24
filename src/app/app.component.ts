@@ -11,10 +11,8 @@ import { User } from './models/User';
 
 @Component({
     selector: 'app-root',
-    standalone: true,
     templateUrl: './app.component.html',
-    styleUrl: './app.component.scss',
-    imports: [HeaderComponent, RouterOutlet, TasksComponent, UserComponent]
+    styleUrl: './app.component.scss'
 })
 export class AppComponent {
   title = 'first-angular-app';
