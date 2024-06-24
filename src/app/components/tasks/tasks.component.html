@@ -3,14 +3,16 @@
     <header>
         <p>{{ name }}'s Tasks</p>
         <menu>
-            <button (click)="addNewTask()">Add Task</button>
+            <button (click)="openNewTaskDialog()" data-toggle="modal" data-target="#newTaskModal">{{ isCreation ? 'Close'  : 'Add Task' }}</button>
         </menu>
     </header>
-
+    @if(isCreation){
+        <app-new-task [userId]="userId" (closeDialog)="closeNewTaskDialog()"></app-new-task>
+    }
     <ul>
         @for(task of selectedUserTasks; track task.id){
         <li>
-            <app-task [task]="task" (complete)="handleCompleteTask($event)"/>
+            <app-task [task]="task"/>
         </li>
         }
     </ul>

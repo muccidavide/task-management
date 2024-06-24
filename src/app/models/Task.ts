@@ -7,4 +7,13 @@ export class Task implements ITask{
         public summary: string,
         public dueDate: string
     ){}
+
+}
+
+export class TaskCreationDto{
+    constructor(
+        public title: string,
+        public summary: string,
+        public dueDate: string
+    ){}
 }
